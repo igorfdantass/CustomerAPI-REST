@@ -6,12 +6,18 @@ import java.util.Date;
 
 @Data
 public class MessageExceptionHandler {
+
     private Date timestamp;
-    private Integer status;
+    private int status;
     private String message;
+
+    MessageExceptionHandler(Date timestamp, int status, String message){
+        this.timestamp = timestamp;
+        this.status = status;
+        this.message = message;
+    }
 }
 
-//TODO: Criar classe ProductControllerAdvice
 //TODO: Alterar código do controller com arrow function para lançar o CustomerFoundException
 //TODO: Testar no postman
 //TODO: Criar um package "services" e colocar lá os métodos findByID, findAll, createCustomer, deleteCustomer
